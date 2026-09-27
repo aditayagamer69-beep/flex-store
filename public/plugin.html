@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Plugin — Flex Store</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        .plugin-page {
+
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 24px;
+
+        }
+
+        .plugin-hero {
+
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            padding: 35px;
+            border-radius: 24px;
+            background: rgba(255,255,255,0.7);
+            border: 1px solid rgba(0,0,0,0.08);
+
+        }
+
+        .plugin-page-logo {
+
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg,#7c3aed,#2563eb);
+            color: white;
+            font-size: 38px;
+            font-weight: 800;
+            overflow: hidden;
+            flex-shrink: 0;
+
+        }
+
+        .plugin-page-logo img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .plugin-hero-info h1 {
+
+            margin: 0 0 10px;
+            font-size: 42px;
+
+        }
+
+        .plugin-hero-info p {
+
+            margin: 0 0 18px;
+            color: #64748b;
+            line-height: 1.7;
+
+        }
+
+        .plugin-meta {
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+        }
+
+        .plugin-meta span {
+
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: #f1f5f9;
+            font-size: 14px;
+
+        }
+
+        .plugin-content {
+
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 25px;
+
+        }
+
+        .plugin-description,
+        .plugin-buy {
+
+            background: rgba(255,255,255,0.7);
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 20px;
+            padding: 28px;
+
+        }
+
+        .plugin-description h2 {
+
+            margin-top: 0;
+
+        }
+
+        .plugin-description p {
+
+            color: #475569;
+            line-height: 1.8;
+
+        }
+
+        .plugin-buy h3 {
+
+            margin-top: 0;
+
+        }
+
+        .plugin-price {
+
+            font-size: 32px;
+            font-weight: 800;
+            margin: 15px 0 20px;
+
+        }
+
+        .plugin-download {
+
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+
+        }
+
+        .plugin-download:hover {
+
+            background: #1d4ed8;
+
+        }
+
+        .back-link {
+
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #475569;
+
+        }
+
+        .plugin-loading {
+
+            text-align: center;
+            padding: 80px 20px;
+            color: #64748b;
+
+        }
+
+        @media (max-width: 750px) {
+
+            .plugin-hero {
+
+                flex-direction: column;
+                text-align: center;
+
+            }
+
+            .plugin-meta {
+
+                justify-content: center;
+
+            }
+
+            .plugin-content {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .plugin-hero-info h1 {
+
+                font-size: 32px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            F
+        </div>
+
+        <span>
+            Flex Store
+        </span>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="/">
+            Discover
+        </a>
+
+        <a
+            href="/#plugins"
+            class="active"
+        >
+            Plugins
+        </a>
+
+        <a href="/#categories">
+            Categories
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <a
+            href="login.html"
+            class="login-button"
+        >
+            Login
+        </a>
+
+    </div>
+
+
+</header>
+
+
+
+<main>
+
+
+    <div
+        class="plugin-page"
+        id="pluginPage"
+    >
+
+        <div class="plugin-loading">
+
+            Loading plugin...
+
+        </div>
+
+    </div>
+
+
+</main>
+
+
+
+<footer>
+
+
+    <div class="footer-logo">
+
+        <div class="logo-icon">
+            F
+        </div>
+
+        <strong>
+            Flex Store
+        </strong>
+
+    </div>
+
+
+    <p>
+        Minecraft plugins, made easier.
+    </p>
+
+
+    <span>
+        © 2026 Flex Store
+    </span>
+
+
+</footer>
+
+
+
+<script>
+
+
+async function loadPlugin() {
+
+
+    const container =
+        document.getElementById(
+            "pluginPage"
+        );
+
+
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+
+    const slug =
+        params.get("slug");
+
+
+    if (!slug) {
+
+
+        container.innerHTML = `
+
+            <div class="plugin-loading">
+
+                Plugin not specified.
+
+                <br><br>
+
+                <a href="/">
+                    ← Back to Flex Store
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    try {
+
+
+        const response =
+            await fetch("/api/plugins");
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !data.success ||
+            !Array.isArray(data.plugins)
+        ) {
+
+            throw new Error(
+                "Invalid plugin data"
+            );
+
+        }
+
+
+        const plugin =
+            data.plugins.find(
+                item =>
+                    item.slug === slug
+            );
+
+
+        if (!plugin) {
+
+
+            container.innerHTML = `
+
+                <div class="plugin-loading">
+
+                    Plugin not found.
+
+                    <br><br>
+
+                    <a href="/">
+                        ← Back to Flex Store
+                    </a>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        const initials =
+            plugin.name
+                .substring(0, 2)
+                .toUpperCase();
+
+
+        const logo =
+            plugin.logo
+
+            ? `
+
+                <img
+                    src="/plugin-assets/${plugin.logo}"
+                    alt="${escapeHTML(plugin.name)}"
+                >
+
+            `
+
+            : initials;
+
+
+        const price =
+            Number(plugin.price) > 0
+
+            ? `₹${plugin.price}`
+
+            : "Free";
+
+
+        container.innerHTML = `
+
+
+            <a
+                href="/#plugins"
+                class="back-link"
+            >
+                ← Back to plugins
+            </a>
+
+
+            <section class="plugin-hero">
+
+
+                <div class="plugin-page-logo">
+
+                    ${logo}
+
+                </div>
+
+
+                <div class="plugin-hero-info">
+
+
+                    <h1>
+                        ${escapeHTML(
+                            plugin.name
+                        )}
+                    </h1>
+
+
+                    <p>
+                        ${escapeHTML(
+                            plugin.description
+                        )}
+                    </p>
+
+
+                    <div class="plugin-meta">
+
+
+                        <span>
+                            v${escapeHTML(
+                                plugin.version
+                            )}
+                        </span>
+
+
+                        <span>
+                            ${escapeHTML(
+                                plugin.category
+                            )}
+                        </span>
+
+
+                        <span>
+                            Paper
+                        </span>
+
+
+                        <span>
+                            Spigot
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <section class="plugin-content">
+
+
+                <div class="plugin-description">
+
+
+                    <h2>
+                        About this plugin
+                    </h2>
+
+
+                    <p>
+                        ${escapeHTML(
+                            plugin.description
+                        )}
+                    </p>
+
+
+                    <h2>
+                        Compatibility
+                    </h2>
+
+
+                    <p>
+                        This plugin is designed
+                        for Minecraft servers
+                        running Paper or Spigot.
+                    </p>
+
+
+                </div>
+
+
+
+                <aside class="plugin-buy">
+
+
+                    <h3>
+                        Get this plugin
+                    </h3>
+
+
+                    <div class="plugin-price">
+
+                        ${price}
+
+                    </div>
+
+
+                    <a
+                        class="plugin-download"
+                        href="/api/plugins/${encodeURIComponent(
+                            plugin.slug
+                        )}/download"
+                    >
+                        Download
+                    </a>
+
+
+                </aside>
+
+
+            </section>
+
+        `;
+
+
+    } catch (error) {
+
+
+        console.error(error);
+
+
+        container.innerHTML = `
+
+            <div class="plugin-loading">
+
+                Failed to load plugin.
+
+                <br><br>
+
+                <a href="/">
+                    ← Back to Flex Store
+                </a>
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+
+function escapeHTML(value) {
+
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+loadPlugin();
+
+
+</script>
+
+
+</body>
+
+</html>

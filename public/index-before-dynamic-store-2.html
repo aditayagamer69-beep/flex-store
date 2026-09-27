@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flex Store — Minecraft Plugins</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+        <div class="logo-icon">F</div>
+        <span>Flex Store</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="#" class="active">Discover</a>
+        <a href="#plugins">Plugins</a>
+        <a href="#categories">Categories</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="search-button" id="searchButton">
+            🔍
+            <span>Search</span>
+        </button>
+
+        <a href="login.html" class="login-button">
+            Login
+        </a>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                ✦ Minecraft Plugin Marketplace
+            </div>
+
+            <h1>
+                Discover plugins.<br>
+                <span>Build your server.</span>
+            </h1>
+
+            <p>
+                Find powerful Minecraft plugins for Paper, Spigot
+                and more — all in one place.
+            </p>
+
+            <div class="hero-search">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="mainSearch"
+                    placeholder="Search plugins..."
+                >
+
+                <button id="heroSearchButton">
+                    Search
+                </button>
+
+            </div>
+
+            <div class="quick-tags">
+
+                <span>Popular:</span>
+
+                <button>Economy</button>
+                <button>Permissions</button>
+                <button>Chat</button>
+                <button>Utility</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="section" id="categories">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">EXPLORE</span>
+                <h2>Browse Categories</h2>
+            </div>
+
+            <a href="#">View all →</a>
+
+        </div>
+
+        <div class="category-grid">
+
+            <button class="category-card">
+                <div class="category-icon">⚡</div>
+                <strong>Utility</strong>
+                <span>Useful server tools</span>
+            </button>
+
+            <button class="category-card">
+                <div class="category-icon">💰</div>
+                <strong>Economy</strong>
+                <span>Money & trading</span>
+            </button>
+
+            <button class="category-card">
+                <div class="category-icon">🛡️</div>
+                <strong>Permissions</strong>
+                <span>Ranks & access</span>
+            </button>
+
+            <button class="category-card">
+                <div class="category-icon">💬</div>
+                <strong>Chat</strong>
+                <span>Chat & social</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLUGINS -->
+
+    <section class="section" id="plugins">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">DISCOVER</span>
+                <h2>Featured Plugins</h2>
+            </div>
+
+            <a href="#">View all →</a>
+
+        </div>
+
+
+        <div class="plugin-grid">
+
+            <!-- FLEXRANKS -->
+
+            <article class="plugin-card">
+
+                <div class="plugin-top">
+
+                    <div class="plugin-logo">
+                        F
+                    </div>
+
+                    <div class="plugin-info">
+
+                        <h3>flexRanks</h3>
+
+                        <p>
+                            Powerful rank and permission
+                            management for Minecraft servers.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="plugin-tags">
+
+                    <span>Paper</span>
+                    <span>Spigot</span>
+                    <span class="paid">Paid</span>
+
+                </div>
+
+                <div class="plugin-bottom">
+
+                    <span>v1.0.0</span>
+
+                    <a href="#">
+                        View Plugin →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- FLEXLOGIN -->
+
+            <article class="plugin-card">
+
+                <div class="plugin-top">
+
+                    <div class="plugin-logo purple">
+                        FL
+                    </div>
+
+                    <div class="plugin-info">
+
+                        <h3>flexLogin</h3>
+
+                        <p>
+                            Secure player authentication
+                            and server protection.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="plugin-tags">
+
+                    <span>Paper</span>
+                    <span>Spigot</span>
+                    <span class="coming">Coming Soon</span>
+
+                </div>
+
+                <div class="plugin-bottom">
+
+                    <span>v1.0.0</span>
+
+                    <a href="#">
+                        View Plugin →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- AIBOTS -->
+
+            <article class="plugin-card">
+
+                <div class="plugin-top">
+
+                    <div class="plugin-logo orange">
+                        AI
+                    </div>
+
+                    <div class="plugin-info">
+
+                        <h3>aiBots</h3>
+
+                        <p>
+                            AI-powered NPCs that bring
+                            your Minecraft server to life.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="plugin-tags">
+
+                    <span>Paper</span>
+                    <span>Spigot</span>
+                    <span class="coming">Coming Soon</span>
+
+                </div>
+
+                <div class="plugin-bottom">
+
+                    <span>v1.0.0</span>
+
+                    <a href="#">
+                        View Plugin →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="creator-banner">
+
+        <div>
+
+            <span class="section-label">
+                FOR DEVELOPERS
+            </span>
+
+            <h2>
+                Have a Minecraft plugin?
+            </h2>
+
+            <p>
+                Publish your plugin on Flex Store
+                and reach Minecraft server owners.
+            </p>
+
+        </div>
+
+        <button>
+            Become a Creator →
+        </button>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        <div class="logo-icon">F</div>
+        <strong>Flex Store</strong>
+    </div>
+
+    <p>
+        Minecraft plugins, made easier.
+    </p>
+
+    <span>
+        © 2026 Flex Store
+    </span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

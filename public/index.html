@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Flex Store — Minecraft Plugins</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            F
+        </div>
+
+        <span>
+            Flex Store
+        </span>
+
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="#" class="active">
+            Discover
+        </a>
+
+        <a href="#plugins">
+            Plugins
+        </a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <button
+            class="search-button"
+            id="searchButton"
+        >
+            🔍
+            <span>
+                Search
+            </span>
+        </button>
+
+
+        <a
+            href="login.html"
+            class="login-button"
+        >
+            Login
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <div class="hero-badge">
+
+                ✦ Minecraft Plugin Marketplace
+
+            </div>
+
+
+            <h1>
+
+                Discover plugins.<br>
+
+                <span>
+                    Build your server.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Find powerful Minecraft plugins
+                for Paper, Spigot and more —
+                all in one place.
+
+            </p>
+
+
+            <div class="hero-search">
+
+                <span>
+                    🔍
+                </span>
+
+
+                <input
+                    type="text"
+                    id="mainSearch"
+                    placeholder="Search plugins..."
+                >
+
+
+                <button
+                    id="heroSearchButton"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="quick-tags">
+
+                <span>
+                    Popular:
+                </span>
+
+
+                <button
+                    data-category="Economy"
+                >
+                    Economy
+                </button>
+
+
+                <button
+                    data-category="Permissions"
+                >
+                    Permissions
+                </button>
+
+
+                <button
+                    data-category="Chat"
+                >
+                    Chat
+                </button>
+
+
+                <button
+                    data-category="Utility"
+                >
+                    Utility
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CATEGORIES -->
+
+    <section
+        class="section"
+        id="categories"
+    >
+
+        <div class="section-heading">
+
+
+            <div>
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Browse Categories
+                </h2>
+
+            </div>
+
+
+            <a href="#plugins">
+                View all →
+            </a>
+
+        </div>
+
+
+
+        <div class="category-grid">
+
+
+            <button
+                class="category-card"
+                data-category="Utility"
+            >
+
+                <div class="category-icon">
+                    ⚡
+                </div>
+
+                <strong>
+                    Utility
+                </strong>
+
+                <span>
+                    Useful server tools
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                data-category="Economy"
+            >
+
+                <div class="category-icon">
+                    💰
+                </div>
+
+                <strong>
+                    Economy
+                </strong>
+
+                <span>
+                    Money & trading
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                data-category="Permissions"
+            >
+
+                <div class="category-icon">
+                    🛡️
+                </div>
+
+                <strong>
+                    Permissions
+                </strong>
+
+                <span>
+                    Ranks & access
+                </span>
+
+            </button>
+
+
+
+            <button
+                class="category-card"
+                data-category="Chat"
+            >
+
+                <div class="category-icon">
+                    💬
+                </div>
+
+                <strong>
+                    Chat
+                </strong>
+
+                <span>
+                    Chat & social
+                </span>
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PLUGINS -->
+
+    <section
+        class="section"
+        id="plugins"
+    >
+
+
+        <div class="section-heading">
+
+
+            <div>
+
+                <span class="section-label">
+                    DISCOVER
+                </span>
+
+                <h2>
+                    Featured Plugins
+                </h2>
+
+            </div>
+
+
+            <a href="#plugins">
+                View all →
+            </a>
+
+
+        </div>
+
+
+
+        <div
+            class="plugin-grid"
+            id="pluginGrid"
+        >
+
+            <div class="plugin-loading">
+
+                Loading plugins...
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- CTA -->
+
+    <section class="creator-banner">
+
+
+        <div>
+
+
+            <span class="section-label">
+                FOR DEVELOPERS
+            </span>
+
+
+            <h2>
+                Have a Minecraft plugin?
+            </h2>
+
+
+            <p>
+                Publish your plugin on Flex Store
+                and reach Minecraft server owners.
+            </p>
+
+
+        </div>
+
+
+        <button>
+            Become a Creator →
+        </button>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+
+    <div class="footer-logo">
+
+
+        <div class="logo-icon">
+            F
+        </div>
+
+
+        <strong>
+            Flex Store
+        </strong>
+
+
+    </div>
+
+
+    <p>
+        Minecraft plugins, made easier.
+    </p>
+
+
+    <span>
+        © 2026 Flex Store
+    </span>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+
+/* =========================
+   PLUGIN STORE
+========================= */
+
+
+let allPlugins = [];
+
+
+
+async function loadPlugins() {
+
+
+    const grid =
+        document.getElementById("pluginGrid");
+
+
+    try {
+
+
+        const response =
+            await fetch("/api/plugins");
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !data.success ||
+            !Array.isArray(data.plugins)
+        ) {
+
+            throw new Error(
+                "Invalid plugin data"
+            );
+
+        }
+
+
+        allPlugins =
+            data.plugins;
+
+
+        renderPlugins(allPlugins);
+
+
+    } catch (error) {
+
+
+        console.error(
+            "Plugin loading error:",
+            error
+        );
+
+
+        grid.innerHTML = `
+
+            <div class="plugin-loading">
+
+                Failed to load plugins.
+
+            </div>
+
+        `;
+
+    }
+
+}
+
+
+
+/* =========================
+   RENDER PLUGINS
+========================= */
+
+
+function renderPlugins(plugins) {
+
+
+    const grid =
+        document.getElementById("pluginGrid");
+
+
+    if (!plugins.length) {
+
+
+        grid.innerHTML = `
+
+            <div class="plugin-loading">
+
+                No plugins found.
+
+            </div>
+
+        `;
+
+
+        return;
+
+    }
+
+
+    grid.innerHTML = "";
+
+
+    plugins.forEach(plugin => {
+
+
+        const card =
+            document.createElement("article");
+
+
+        card.className =
+            "plugin-card";
+
+
+        const initials =
+            plugin.name
+                .substring(0, 2)
+                .toUpperCase();
+
+
+        let logoHTML =
+            initials;
+
+
+        if (plugin.logo) {
+
+
+            logoHTML = `
+
+                <img
+                    src="/plugin-assets/${plugin.logo}"
+                    alt="${escapeHTML(plugin.name)}"
+                >
+
+            `;
+
+        }
+
+
+        const priceTag =
+            Number(plugin.price) > 0
+
+            ? `
+
+                <span class="paid">
+                    Paid
+                </span>
+
+            `
+
+            : `
+
+                <span>
+                    Free
+                </span>
+
+            `;
+
+
+        card.innerHTML = `
+
+
+            <div class="plugin-top">
+
+
+                <div class="plugin-logo">
+
+                    ${logoHTML}
+
+                </div>
+
+
+                <div class="plugin-info">
+
+
+                    <h3>
+                        ${escapeHTML(plugin.name)}
+                    </h3>
+
+
+                    <p>
+                        ${escapeHTML(
+                            plugin.description
+                        )}
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="plugin-tags">
+
+
+                <span>
+                    ${escapeHTML(
+                        plugin.category
+                    )}
+                </span>
+
+
+                <span>
+                    Paper
+                </span>
+
+
+                <span>
+                    Spigot
+                </span>
+
+
+                ${priceTag}
+
+
+            </div>
+
+
+
+            <div class="plugin-bottom">
+
+
+                <span>
+                    v${escapeHTML(
+                        plugin.version
+                    )}
+                </span>
+
+
+                <a
+                    href="/plugin.html?slug=${encodeURIComponent(
+                        plugin.slug
+                    )}"
+                >
+                    View Plugin →
+                </a>
+
+
+            </div>
+
+
+        `;
+
+
+        grid.appendChild(card);
+
+
+    });
+
+
+}
+
+
+
+/* =========================
+   SEARCH
+========================= */
+
+
+function searchPlugins() {
+
+
+    const input =
+        document.getElementById(
+            "mainSearch"
+        );
+
+
+    const query =
+        input.value
+            .trim()
+            .toLowerCase();
+
+
+    if (!query) {
+
+        renderPlugins(allPlugins);
+
+        return;
+
+    }
+
+
+    const filtered =
+        allPlugins.filter(plugin => {
+
+
+            return (
+
+                plugin.name
+                    .toLowerCase()
+                    .includes(query)
+
+                ||
+
+                plugin.description
+                    .toLowerCase()
+                    .includes(query)
+
+                ||
+
+                plugin.category
+                    .toLowerCase()
+                    .includes(query)
+
+            );
+
+        });
+
+
+    renderPlugins(filtered);
+
+
+    document
+        .getElementById("plugins")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+
+/* =========================
+   CATEGORY FILTER
+========================= */
+
+
+function filterCategory(category) {
+
+
+    const filtered =
+        allPlugins.filter(plugin => {
+
+
+            return plugin.category
+                .toLowerCase()
+                === category.toLowerCase();
+
+        });
+
+
+    renderPlugins(filtered);
+
+
+    document
+        .getElementById("plugins")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+}
+
+
+
+/* =========================
+   HTML SAFETY
+========================= */
+
+
+function escapeHTML(value) {
+
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+
+
+/* =========================
+   EVENTS
+========================= */
+
+
+document
+    .getElementById(
+        "heroSearchButton"
+    )
+    .addEventListener(
+        "click",
+        searchPlugins
+    );
+
+
+
+document
+    .getElementById(
+        "mainSearch"
+    )
+    .addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                searchPlugins();
+
+            }
+
+        }
+    );
+
+
+
+document
+    .getElementById(
+        "searchButton"
+    )
+    .addEventListener(
+        "click",
+        () => {
+
+            document
+                .getElementById(
+                    "mainSearch"
+                )
+                .focus();
+
+            document
+                .querySelector(
+                    ".hero"
+                )
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        }
+    );
+
+
+
+document
+    .querySelectorAll(
+        "[data-category]"
+    )
+    .forEach(button => {
+
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                filterCategory(
+                    button.dataset.category
+                );
+
+            }
+        );
+
+
+    });
+
+
+
+/* =========================
+   START
+========================= */
+
+
+loadPlugins();
+
+
+</script>
+
+
+
+<!-- Visitor Counter -->
+<div id="visitorCounter" class="visitor-counter">
+    👥 <span id="visitorCount">0</span> People Visited This Website
+</div>
+
+<script>
+async function loadVisitorCount() {
+    try {
+        const response = await fetch("/api/visitor-count");
+        const data = await response.json();
+
+        let count = Number(data.count || 0);
+        let text;
+
+        if (count >= 1000000) {
+            text = (count / 1000000).toFixed(count % 1000000 === 0 ? 0 : 1) + "M";
+        } else if (count >= 1000) {
+            text = (count / 1000).toFixed(count % 1000 === 0 ? 0 : 1) + " Thousand";
+        } else {
+            text = count.toLocaleString();
+        }
+
+        document.getElementById("visitorCount").textContent = text;
+    } catch (error) {
+        console.error("Visitor count error:", error);
+    }
+}
+
+loadVisitorCount();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    {
+      "id": 1790536265460,
+      "name": "Citizens 2",
+      "slug": "citizens-2",
+      "version": "2.0.41",
+      "category": "Permission",
+      "price": 0,
+      "description": "Citizens is a powerful NPC plugin for Minecraft Java servers. Create custom NPCs for your lobby, shop, quests, guides, and more. Easy to use, lightweight, and perfect for Paper/Spigot servers.",
+      "jar": "1790536265332-plugin.jar",
+      "logo": null,
+      "createdAt": "2026-09-27T19:11:05.460Z"
+    },
+    {
+      "id": 1790536463289,
+      "name": "EssentialsX",
+      "slug": "essentialsx",
+      "version": "2.21.2",
+      "category": "Permission",
+      "price": 0,
+      "description": "EssentialsX is an essential plugin for Minecraft servers, providing useful commands and features like teleportation, homes, warps, kits, economy, moderation, and more.",
+      "jar": "1790536463176-plugin.jar",
+      "logo": null,
+      "createdAt": "2026-09-27T19:14:23.289Z"
+    }
+  ]
+}
