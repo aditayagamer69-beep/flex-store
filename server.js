@@ -14,7 +14,7 @@ const {
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const pluginsFile =
     path.join(__dirname, "plugins.json");
